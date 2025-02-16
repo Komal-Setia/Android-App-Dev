@@ -28,11 +28,11 @@ import androidx.compose.ui.unit.dp
 import com.example.quoteapp.Quote
 
 @Composable
-fun QuoteListItem(quote: Quote, onClick: ()->Unit) {
+fun QuoteListItem(quote: Quote, onClick: (quote: Quote) -> Unit) {
     Card(
         elevation = CardDefaults.cardElevation(4.dp),
         modifier = Modifier
-            .clickable { onClick() }
+            .clickable { onClick(quote) }
             .padding(8.dp)
     ) {
         Row(
@@ -52,7 +52,7 @@ fun QuoteListItem(quote: Quote, onClick: ()->Unit) {
             Column(modifier = Modifier.weight(1f)) {
                 Text(
                     text = quote.quote,
-                    style = MaterialTheme.typography.bodySmall,
+                    style = MaterialTheme.typography.bodyLarge,
                     modifier = Modifier.padding(0.dp, 0.dp, 0.dp, 8.dp)
                 )
                 Box( //Line
@@ -63,7 +63,7 @@ fun QuoteListItem(quote: Quote, onClick: ()->Unit) {
                 )
                 Text(
                     text = quote.author,
-                    style = MaterialTheme.typography.bodySmall,
+                    style = MaterialTheme.typography.bodyMedium,
                     fontWeight = FontWeight.Thin,
                     modifier = Modifier.padding(top = 4.dp)
                 )

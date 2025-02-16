@@ -1,5 +1,6 @@
 package com.example.quoteapp.screens
 
+import androidx.activity.compose.BackHandler
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Arrangement
@@ -26,11 +27,17 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.text.font.Font
 import androidx.compose.ui.text.font.FontFamily
 import androidx.compose.ui.unit.dp
+import com.example.quoteapp.DataManager
 import com.example.quoteapp.Quote
 import com.example.quoteapp.R
 
 @Composable
-fun QuoteDetail(quote: Quote) {
+fun QuoteDetailScreen(quote: Quote) {
+
+    BackHandler() {
+        DataManager.switchPages(null)
+    }
+
     Box(
         contentAlignment = Alignment.Center,
         modifier = Modifier
@@ -50,19 +57,24 @@ fun QuoteDetail(quote: Quote) {
         ) {
             Column(
                 verticalArrangement = Arrangement.Center,
-                modifier = Modifier.fillMaxHeight()
+                modifier = Modifier
+                    .fillMaxHeight()
                     .padding(16.dp, 24.dp)
             ) {
-                Image(imageVector = Icons.Filled.FormatQuote, contentDescription = "Quote",
+                Image(
+                    imageVector = Icons.Filled.FormatQuote, contentDescription = "Quote",
                     modifier = Modifier
                         .size(80.dp)
-                        .rotate(180F))
+                        .rotate(180F)
+                )
                 Text(
                     text = quote.quote,
                     fontFamily = FontFamily(Font(R.font.montserrat_regular)),
-                    style = MaterialTheme.typography.headlineMedium)
+                    style = MaterialTheme.typography.headlineMedium
+                )
                 Spacer(modifier = Modifier.height(16.dp))
-                Text(text = quote.author,
+                Text(
+                    text = quote.author,
                     fontFamily = FontFamily(Font(R.font.montserrat_regular)),
                     style = MaterialTheme.typography.bodyMedium
                 )

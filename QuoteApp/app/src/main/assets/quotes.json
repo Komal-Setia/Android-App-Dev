@@ -1,18 +1,42 @@
 [
   {
-    "quote": "abc",
-    "author": "abc"
+    "quote": "In three words I can sum up everything I've learned about life: it goes on.",
+    "author": "Robert Frost"
   },
   {
-    "quote": "abc2",
-    "author": "abc"
+    "quote": "Be the change that you wish to see in the world.",
+    "author": "Mahatma Gandhi"
   },
   {
-    "quote": "abc3",
-    "author": "abc"
+    "quote": "The only thing we have to fear is fear itself.",
+    "author": "Franklin D. Roosevelt"
   },
   {
-    "quote": "abc4",
-    "author": "abc"
+    "quote": "It does not matter how slowly you go as long as you do not stop.",
+    "author": "Confucius"
+  },
+  {
+    "quote": "Be yourself; everyone else is already taken",
+    "author": "Oscar Wilde"
+  },
+  {
+    "quote": "The best way to predict your future is to create it.",
+    "author": "Abraham Lincoln"
+  },
+  {
+    "quote": "Life is 10% what happens to us and 90% how we react to it.",
+    "author": "Charles R. Swindoll"
+  },
+  {
+    "quote": "The only limit to our realization of tomorrow is our doubts of today.",
+    "author": "Franklin D. Roosevelt"
+  },
+  {
+    "quote": "It is never too late to be what you might have been.",
+    "author": "George Eliot"
+  },
+  {
+    "quote": "The unexamined life is not worth living.",
+    "author": "Socrates"
   }
 ]
