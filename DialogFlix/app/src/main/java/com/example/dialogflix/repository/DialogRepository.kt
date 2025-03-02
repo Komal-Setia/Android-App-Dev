@@ -25,7 +25,7 @@ class DialogRepository @Inject constructor(private val dialogFlixAPI: DialogFlix
     }
 
     suspend fun getDialogs(category: String) {
-        val response = dialogFlixAPI.getDialogs(category)
+        val response = dialogFlixAPI.getDialogs("dialogues[?(@.category==\"$category\")]")
         if(response.isSuccessful && response.body() != null){
             _dialogs.emit(response.body()!!)
         }

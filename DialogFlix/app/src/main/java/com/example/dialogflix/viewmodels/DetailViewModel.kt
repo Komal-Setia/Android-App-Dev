@@ -17,7 +17,7 @@ class DetailViewModel @Inject constructor(private val repository: DialogReposito
 
         init {
             viewModelScope.launch {
-                repository.getDialogs("")
+                repository.getDialogs("Friends")
             }
         }
 }

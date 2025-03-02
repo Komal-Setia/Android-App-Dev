@@ -13,7 +13,7 @@ interface DialogFlixAPI {
     suspend fun getDialogs(@Header("X-JSON-Path") category: String) : Response<List<DialogListItem>>
 
     @GET("/v3/b/67b771bbe41b4d34e495c90d?meta=false")
-    @Headers("X-JSON-Path : dialogues..category") //static header
+    @Headers("X-JSON-Path:dialogues..category") //static header
     suspend fun getCategories() : Response<List<String>>
 
 }
