@@ -7,7 +7,7 @@ plugins {
 
 android {
     namespace = "com.example.dialogflix"
-    compileSdk = 34
+    compileSdk = 35
 
     defaultConfig {
         applicationId = "com.example.dialogflix"
@@ -90,4 +90,7 @@ dependencies {
     //Navigation
     implementation ("androidx.navigation:navigation-compose:2.8.7")
     implementation("androidx.hilt:hilt-navigation-compose:1.2.0")
+
+    implementation("com.airbnb.android:lottie-compose:6.1.0")
+
 }
